@@ -5,6 +5,13 @@ project(TOMMY LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+# Set the build type to Release for optimizations
+set(CMAKE_BUILD_TYPE Release)
+
+# Enable compiler optimizations for release builds
+if(CMAKE_BUILD_TYPE STREQUAL "Release")
+    set(CMAKE_CXX_FLAGS_RELEASE "-O3 -march=native -funroll-loops")
+endif()
 
 # Put any CPP files you want to have compiled here. 
 add_executable(${PROJECT_NAME}
