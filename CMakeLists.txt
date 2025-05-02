@@ -11,6 +11,8 @@ add_executable(${PROJECT_NAME}
     cpp/higher_lower_game.cpp 
 )
 
+add_executable(LeetCode1 cpp/leetcode-1.cpp)
+
 # If you have other folders with .h files in them, add those here
 target_include_directories(${PROJECT_NAME} PUBLIC
     # ${CMAKE_CURRENT_SOURCE_DIR}/include
