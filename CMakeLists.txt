@@ -13,6 +13,7 @@ add_executable(${PROJECT_NAME}
 
 add_executable(LeetCode1 cpp/leetcode-1.cpp)
 add_executable(LeetCode9 cpp/leetcode-9.cpp)
+add_executable(CPPspeedTest pythonvscpp_speed_test/binary_search.cpp)
 
 # If you have other folders with .h files in them, add those here
 target_include_directories(${PROJECT_NAME} PUBLIC
