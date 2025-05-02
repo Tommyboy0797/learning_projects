@@ -8,7 +8,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Put any CPP files you want to have compiled here. 
 add_executable(${PROJECT_NAME}
-    cpp/first_try.cpp 
+    cpp/higher_lower_game.cpp 
 )
 
 # If you have other folders with .h files in them, add those here
