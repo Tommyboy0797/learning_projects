@@ -8,6 +8,13 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # Set the build type to Release for optimizations
 set(CMAKE_BUILD_TYPE Release)
 
+if(MSVC)
+    set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /O2 /DNDEBUG")
+else()
+    set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O3 -DNDEBUG")
+endif()
+
+
 # Put any CPP files you want to have compiled here. 
 add_executable(${PROJECT_NAME}
     cpp/higher_lower_game.cpp 
