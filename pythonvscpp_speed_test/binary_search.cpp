@@ -6,16 +6,15 @@ using namespace std;
 
 vector<int> arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 int target = 8;
-
+int mid = 0;
 void binary_search(vector<int> array, int target) {
     int left = 0;
     int right = array.size() - 1; 
 
     while (left <= right) {
-        int mid = (left + right) / 2;
+        mid = (left + right) / 2;
 
         if (array[mid] == target) {
-            cout << "Found the value at index " << mid << endl;
             return;  
         }
         if (array[mid] < target) {
@@ -38,6 +37,6 @@ int main() {
     chrono::duration<double> duration = end - start;
 
     cout << "Execution time for 1000 runs: " << duration.count() << " seconds" << endl;
-
+    cout << "Found the value at index " << mid << endl;
     return 0;
 }
